@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./:/app
+    environment:
+      - MONGO_DB_CONNECT=mongodb://mongodb:27017/app
+      - PORT=5001
+    depends_on:
+      - mongodb
+    networks:
+      - api-network
+
+  mongodb:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=contact
+    networks:
+      - api-network
+
+networks:
+    api-network:
+        driver: bridge
