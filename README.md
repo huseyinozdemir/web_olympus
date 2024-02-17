@@ -36,7 +36,7 @@ curl --location 'http://127.0.0.1:5001/api/contact/add' \
 --data-raw '{
     "name": "Micheal",
     "surname": "Levit",
-    "email": "levitmichael2@gmail.com",
+    "email": "rrrr@gmail.com",
     "phone": "900004404",
     "message": "Tested with postman"
 }'
