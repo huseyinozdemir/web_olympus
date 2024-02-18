@@ -7,7 +7,7 @@ npm install
 ```
 
 ## compile your TypeScript file:
-tsc server.tsx
+tsc server.ts
 
 ## start app
 npm run start
